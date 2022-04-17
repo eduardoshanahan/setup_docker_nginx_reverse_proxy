@@ -44,7 +44,7 @@ DOMAIN=<your domain> docker compose -f ./certbot-dnscloudflare/docker-compose.re
 
 Some time ago I started using Python DoIt as part of my development toolbox and I am quite happy with it. I included my ```dodo.py``` file to cover for it.
 
-```bash
+```
 $ doit list
 issue_certificate    Issue a certificate for a given domain - usage: issue_certificate -d domain.com (required)
 list_certificates    List the SSL certificates available
