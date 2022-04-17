@@ -23,13 +23,3 @@ services:
       -d *.${DOMAIN}
       --force-renewal
     # --dry-run
-
-    # Revoke certificates
-    # command: >-
-    #   revoke
-    #   --non-interactive
-    #   --cert-name 1e6monkeys.com
-    #   --cert-name *.106monkeys.com
-  
-
-
