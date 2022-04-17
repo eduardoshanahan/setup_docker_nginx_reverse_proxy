@@ -1,8 +1,12 @@
-# Monkey sign: look at the monekys waving
+# Monkey sign: look at the monkeys waving
 
 I needed a simple http service to verify if my Nginx proxy was working.
 
 There are implementations already done like [Jason Wilder's whoami](https://github.com/jwilder/whoami), but I also wanted to have the IP address and host name for the container.
+
+### Why monkeys?
+
+The more birthdays I pile up, the more I struggle to differentiate us from the monkeys. And that is not too bad, it makes me a lot more compassionate than before.
 
 ## To test it once the container is running:
 
