@@ -1,0 +1,35 @@
+services:
+
+  certbot-dns-cloudflare:
+    image: certbot/dns-cloudflare
+    hostname: certbot-dns-cloudflare
+    container_name: certbot-dns-cloudflare
+    volumes:
+      - ./cloudflare:/opt/cloudflare
+      - ./letsencrypt:/etc/letsencrypt
+      - ./letsencrypt/log:/var/log/letsencrypt
+
+    # Issue certificate
+    command: >-
+      certonly 
+      --non-interactive 
+      --key-type ecdsa 
+      --dns-cloudflare 
+      --dns-cloudflare-credentials /opt/cloudflare/credentials 
+      --agree-tos 
+      --email eduardo.shanahan@arrowheadmind.com
+      --dns-cloudflare-propagation-seconds 60
+      -d ${DOMAIN}
+      -d *.${DOMAIN}
+      --force-renewal
+    # --dry-run
+
+    # Revoke certificates
+    # command: >-
+    #   revoke
+    #   --non-interactive
+    #   --cert-name 1e6monkeys.com
+    #   --cert-name *.106monkeys.com
+  
+
+
