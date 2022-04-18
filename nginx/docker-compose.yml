@@ -1,6 +1,5 @@
-version: '3'
-
 services:
+
   reverse:
     container_name: reverse
     hostname: reverse
@@ -11,3 +10,15 @@ services:
     volumes:
       - ./nginx-config:/etc/nginx
       # - ./certs:/etc/ssl/private
+
+  monkeysign1:
+    image: monkeysign
+    hostname: monkeysign1
+    ports:
+      - 8081:80
+
+  monkeysign2:
+    image: monkeysign
+    hostname: monkeysign2
+    ports:
+      - 8082:80      
