@@ -1,0 +1,1 @@
+You need to create a symbolic link from the site certificates to this directory.
